@@ -18,12 +18,7 @@ public class NoteVersionController {
     private NoteVersionService noteVersionService;
 
     @GetMapping( value = "/versions")
-    public List<NoteVersionDto> getExemplars(@RequestParam Long note_Id) {
+    public List<NoteVersionDto> getVersions(@RequestParam Long note_Id) {
         return noteVersionService.getVersionsOfNoteById(note_Id);
-    }
-
-    @GetMapping(value = "/allversions")
-    public List<NoteVersionDto> getNotes() {
-        return noteVersionService.getNotes();
     }
 }

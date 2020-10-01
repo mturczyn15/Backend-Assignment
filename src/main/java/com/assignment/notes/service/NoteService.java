@@ -27,8 +27,7 @@ public class NoteService {
 
     public NoteDto create(NoteDto noteDto) {
 
-        Note note = new Note(noteDto.getTitle(), noteDto.getContent());
-        Note saved = noteRepository.save(note);
+        Note saved = noteRepository.save(new Note(noteDto.getTitle(), noteDto.getContent()));
         noteVersionRepository.save(new NoteVersion(saved, 1, Action.CREATE));
         return noteMapper.mapToDto(saved);
     }
@@ -57,6 +56,7 @@ public class NoteService {
 
     public void delete(final Long id) {
         Note note = noteRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("There is no note with id: " + id));
+        note.setModified(LocalDate.now());
         Integer nOfVersion = noteVersionRepository.findByNoteId(id).size();
         noteVersionRepository.save(new NoteVersion(note, ++nOfVersion, Action.DELETE));
         noteRepository.deleteById(id);

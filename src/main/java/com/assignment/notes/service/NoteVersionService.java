@@ -21,8 +21,4 @@ public class NoteVersionService {
         List<NoteVersion> list = noteVersionRepository.findByNoteId(noteId);
         return noteVersionMapper.mapToDtoList(list);
     }
-
-    public List<NoteVersionDto> getNotes() {
-        return noteVersionMapper.mapToDtoList(noteVersionRepository.findAll());
-    }
 }

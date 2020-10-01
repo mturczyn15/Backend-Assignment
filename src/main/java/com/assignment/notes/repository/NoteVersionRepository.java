@@ -11,7 +11,6 @@ public interface NoteVersionRepository extends CrudRepository<NoteVersion, Long>
     @Override
     NoteVersion save(NoteVersion note);
 
-
     List<NoteVersion> findByNoteId(Long noteId);
 
     @Override
