@@ -37,7 +37,7 @@ public class NoteController {
     }
 
     @DeleteMapping( value = "/notes/{noteId}")
-    public void deleteCart(@PathVariable("noteId") Long noteId) {
+    public void deleteNote(@PathVariable("noteId") Long noteId) {
         noteService.delete(noteId);
     }
 }

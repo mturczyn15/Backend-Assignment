@@ -2,14 +2,11 @@ package com.assignment.notes.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import javax.validation.constraints.NotNull;
 import java.time.LocalDate;
 
-@Getter
 @NoArgsConstructor
 @Entity
 @Data
@@ -34,7 +31,7 @@ public class Note {
     @Column(name = "MODIFIED")
     private LocalDate modified;
 
-    public Note( @NotNull String title, @NotNull String content) {
+    public Note(String title, String content) {
         this.title = title;
         this.content = content;
         this.created = LocalDate.now();
