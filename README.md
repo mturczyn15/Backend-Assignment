@@ -10,7 +10,7 @@ This project provides a simple RESTful web API where you can manage with notes.
  For Intellij:
 - File -> New -> Project from existing sources..  <br />->choose folder where you downloaded project and click file "build.gradle"
   -> wait for buildind project  <br />-> Open class "NotesApplication.java" situated in package com.assignment.notes and run it's main method as shown on photo,
-  ![dadada](https://snipboard.io/vR5dZ2.jpg)
+  ![dadada](https://snipboard.io/3BIsRY.jpg)
  - Project is running,
  - server port it's 8080,
  - url: http://localhost:8080/v1
