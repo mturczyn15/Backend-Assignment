@@ -5,18 +5,18 @@ This project provides a simple RESTful web API where you can manage with notes.
 - Gradle
 # How to start project
 - download project from Github,
-- open IDE
+- open IDE.
  For Intellij:
 - File -> New -> Project from existing sources.. -> choose folder where you downloaded project and find file "build.gradle"
-  -> wait for buildind project -> Open class "Notes application" and run it's main method
- - Project is running.
+  -> wait for buildind project -> Open class "Notes application" and run it's main method,
+ - Project is running,
  - server port it's 8080
 # Endpoints
 ## Creating note:
 Request: method POST curl: http://localhost:8080/v1/notes that endpoint consumes JSON (you don't have to place id, create, modified, this data are read-only) e.g
-{	
-	"title": "note",
-	"content": "do sth"
+{	<br />
+	"title": "note",<br />
+	"content": "do sth"<br />
 }
 
 ## Getting single note:
