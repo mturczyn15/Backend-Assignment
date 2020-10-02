@@ -1,7 +1,7 @@
 # Note Backend-Assignment
 This project provides a simple RESTful web API where you can manage with notes.
 # Requirements
-- JavaIDE(Intellij, Eclipse),
+- JavaIDE (Intellij, Eclipse),
 - Gradle
 # How to start project
 - download project from Github,
