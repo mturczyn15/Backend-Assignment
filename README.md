@@ -7,8 +7,8 @@ This project provides a simple RESTful web API where you can manage with notes.
 - download project from Github,
 - open IDE.
  For Intellij:
-- File -> New -> Project from existing sources.. -> choose folder where you downloaded project and find file "build.gradle"
-  -> wait for buildind project -> Open class "Notes application" and run it's main method,
+- File -> New -> Project from existing sources..  <br />->choose folder where you downloaded project and find file "build.gradle"
+  -> wait for buildind project  <br />-> Open class "NotesApplication" and run it's main method,
  - Project is running,
  - server port it's 8080
 # Endpoints
