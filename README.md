@@ -12,12 +12,30 @@ This project provides a simple RESTful web API where you can manage with notes.
   Project is running.
  - server port it's 8080
 # Endpoints
-Creating note:
+##Creating note:
 method POST curl: http://localhost:8080/v1/notes that endpoint cosnumes JSON e.g
 {	
 	"title": "note",
 	"content": "do sth"
 }
+
+##Getting single note:
+Request
+Path parameters
+id Required
+method GET curl: http://localhost:8080/v1/notes/id
+Response:
+{
+    "id": 5,
+    "title": "note",
+    "content": "text",
+    "created": "2020-10-02",
+    "modified": null
+}
+
+
+##Getting all notes:
+method GET curl: http://localhost:8080/v1/notes
 
 
 
@@ -28,5 +46,7 @@ method POST curl: http://localhost:8080/v1/notes that endpoint cosnumes JSON e.g
 # Additional API documentation
 - Run application
 - Api doc is available on: http://localhost:8080/swagger-ui.html
+# Author
+Marcin Turczyn
   
 
