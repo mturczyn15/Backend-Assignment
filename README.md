@@ -84,12 +84,12 @@ This project provides a simple RESTful web API where you can manage with notes.
 
 
 ## Get all versions of note
--Notes are versioned you can can check note's story of modifies.<br />
--Request: method GET curl: http://localhost:8080/v1/versions?note_Id=1<br />
--note_Id - query parameter. Id of note, which you want check.<br />
--Even if you delete note, you can check story of changes.<br />
--In response you can see id, noteId, title, content, created, modified, action(CREATE, UPDATE or DELETE), date of modification and version.<br />
--Possible Response:<br />
+- Notes are versioned you can can check note's story of modifies.<br />
+- Request: method GET curl: http://localhost:8080/v1/versions?note_Id=1<br />
+- note_Id - query parameter. Id of note, which you want check.<br />
+- Even if you delete note, you can check story of changes.<br />
+- In response you can see id, noteId, title, content, created, modified, action(CREATE, UPDATE or DELETE), date of modification and version.<br />
+- Possible Response:<br />
 [<br />
     {<br />
         "id": 2,<br />
