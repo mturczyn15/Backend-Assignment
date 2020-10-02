@@ -30,17 +30,17 @@ This project provides a simple RESTful web API where you can manage with notes.
 
 # Endpoints
 ## Creating note:
-Request: method POST curl: http://localhost:8080/v1/notes that endpoint consumes JSON (you don't have to place id, create, modified, this data are read-only) e.g<br />
-fields created and modified cant be null and must contains at least 3 characters<br />
+- Request: method POST curl: http://localhost:8080/v1/notes that endpoint consumes JSON (you don't have to place id, create, modified, this data are read-only) e.g<br />
+- Fields created and modified cant be null and must contains at least 3 characters<br />
 {	<br />
 	"title": "note",<br />
 	"content": "do sth"<br />
 }<br />
 
 ## Getting single note:
-Request: method GET curl: http://localhost:8080/v1/notes/{id} e.g http://localhost:8080/v1/notes/1<br />
-id - requested path variable<br />
-Possible Response:<br />
+- Request: method GET curl: http://localhost:8080/v1/notes/{id} e.g http://localhost:8080/v1/notes/1<br />
+- id - requested path variable<br />
+- Possible Response:<br />
 {<br />
     "id": 5,<br />
     "title": "note",<br />
@@ -51,8 +51,8 @@ Possible Response:<br />
 
 
 ## Getting all notes:
-Request: method GET curl: http://localhost:8080/v1/notes<br />
-Possible Response:<br />
+- Request: method GET curl: http://localhost:8080/v1/notes<br />
+- Possible Response:<br />
 [<br />
 {<br />
     "id": 1,<br />
@@ -70,7 +70,7 @@ Possible Response:<br />
 }<br />]<br />
 
 ## Update note
-Request: method PUT curl: http://localhost:8080/v1/notes that endpoint cosnumes JSON with note's id, and modified data e.g<br />
+- Request: method PUT curl: http://localhost:8080/v1/notes that endpoint cosnumes JSON with note's id, and modified data e.g<br />
 {	<br />
 	"id": 1,<br />
 	"title": "note",<br />
@@ -78,18 +78,18 @@ Request: method PUT curl: http://localhost:8080/v1/notes that endpoint cosnumes 
 }<br />
 
 ## Delete note
-Request: method DELETE curl: http://localhost:8080/v1/notes/{id} e.g http://localhost:8080/v1/notes/1<br />
-id - requested path variable<br />
-When you delete note it is stored in version history.<br />
+- Request: method DELETE curl: http://localhost:8080/v1/notes/{id} e.g http://localhost:8080/v1/notes/1<br />
+- id - requested path variable<br />
+- When you delete note it is stored in version history.<br />
 
 
 ## Get all versions of note
-Notes are versioned you can can check note's story of modifies.<br />
-Request: method GET curl: http://localhost:8080/v1/versions?note_Id=1<br />
-note_Id - query parameter. Id of note, which you want check.<br />
-Even if you delete note, you can check story of changes.<br />
-In response you can see id, noteId, title, content, created, modified, action(CREATE, UPDATE or DELETE), date of modification and version.<br />
-Possible Response:<br />
+-Notes are versioned you can can check note's story of modifies.<br />
+-Request: method GET curl: http://localhost:8080/v1/versions?note_Id=1<br />
+-note_Id - query parameter. Id of note, which you want check.<br />
+-Even if you delete note, you can check story of changes.<br />
+-In response you can see id, noteId, title, content, created, modified, action(CREATE, UPDATE or DELETE), date of modification and version.<br />
+-Possible Response:<br />
 [<br />
     {<br />
         "id": 2,<br />
@@ -134,7 +134,7 @@ Possible Response:<br />
 ]<br />
 
 # Database
-This application uses H2Database. It's no need to configure database, configuration of database in placed in application.properties file.<br />
+- This application uses H2Database. It's no need to configure database, configuration of database in placed in application.properties file.<br />
 
 # Additional API documentation
 - Run application
