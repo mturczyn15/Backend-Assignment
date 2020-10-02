@@ -13,18 +13,16 @@ This project provides a simple RESTful web API where you can manage with notes.
  - server port it's 8080
 # Endpoints
 ## Creating note:
-method POST curl: http://localhost:8080/v1/notes that endpoint cosnumes JSON e.g
+Request: method POST curl: http://localhost:8080/v1/notes that endpoint consumes JSON (you don't have to place id, create, modified, this data are read-only) e.g
 {	
 	"title": "note",
 	"content": "do sth"
 }
 
 ## Getting single note:
-Request
-Path parameters
-id Required
-method GET curl: http://localhost:8080/v1/notes/id
-Response:
+Request: method GET curl: http://localhost:8080/v1/notes/{id}
+id - requested path parameter
+Possible Response:
 {
     "id": 5,
     "title": "note",
@@ -35,10 +33,52 @@ Response:
 
 
 ## Getting all notes:
-method GET curl: http://localhost:8080/v1/notes
+Request: method GET curl: http://localhost:8080/v1/notes
+Possible Response:
+{
+    "id": 1,
+    "title": "note",
+    "content": "text",
+    "created": "2020-10-02",
+    "modified": null
+}
+{
+    "id": 2,
+    "title": "note",
+    "content": "text",
+    "created": "2020-10-02",
+    "modified": null
+}
 
+## Update note
+Request: method PUT curl: http://localhost:8080/v1/notes that endpoint cosnumes JSON with note's id, and modified data e.g
+{	
+	"id": 1,
+	"title": "note",
+	"content": "do sth"
+}
 
+## Delete note
+Request: method DELETE curl: http://localhost:8080/v1/notes/{id}
+id - requested path parameter
 
+## Get all versions of note
+Request: method GET curl: http://localhost:8080/v1/notes
+Possible Response:
+{
+    "id": 1,
+    "title": "note",
+    "content": "text",
+    "created": "2020-10-02",
+    "modified": null
+}
+{
+    "id": 2,
+    "title": "note",
+    "content": "text",
+    "created": "2020-10-02",
+    "modified": null
+}
 
 
 
