@@ -12,14 +12,14 @@ This project provides a simple RESTful web API where you can manage with notes.
   Project is running.
  - server port it's 8080
 # Endpoints
-##Creating note:
+## Creating note:
 method POST curl: http://localhost:8080/v1/notes that endpoint cosnumes JSON e.g
 {	
 	"title": "note",
 	"content": "do sth"
 }
 
-##Getting single note:
+## Getting single note:
 Request
 Path parameters
 id Required
@@ -34,7 +34,7 @@ Response:
 }
 
 
-##Getting all notes:
+## Getting all notes:
 method GET curl: http://localhost:8080/v1/notes
 
 
