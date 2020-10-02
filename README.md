@@ -131,6 +131,8 @@ Possible Response:<br />
     }<br />
 ]<br />
 
+# Database
+This application uses H2Database. It's no need to configure database, configuration of database in placed in application.properties file.<br />
 
 # Additional API documentation
 - Run application
