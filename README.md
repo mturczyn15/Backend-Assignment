@@ -14,6 +14,7 @@ This project provides a simple RESTful web API where you can manage with notes.
 # Endpoints
 ## Creating note:
 Request: method POST curl: http://localhost:8080/v1/notes that endpoint consumes JSON (you don't have to place id, create, modified, this data are read-only) e.g<br />
+fields created and modified cant be null and must contains at least 3 characters<br />
 {	<br />
 	"title": "note",<br />
 	"content": "do sth"<br />
