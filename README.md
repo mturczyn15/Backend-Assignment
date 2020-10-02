@@ -1,6 +1,7 @@
 # Note Backend-Assignment
 This project provides a simple RESTful web API where you can manage with notes.
 # Requirements
+- Java 8,
 - JavaIDE (Intellij, Eclipse),
 - Gradle
 # How to start project
@@ -11,6 +12,18 @@ This project provides a simple RESTful web API where you can manage with notes.
   -> wait for buildind project  <br />-> Open class "NotesApplication" and run it's main method,
  - Project is running,
  - server port it's 8080
+ 
+# Technologies
+- Java 8
+- Spring Web,
+- Hibernate,
+- JUnit,
+- Mockito,
+- Swagger,
+- Hibernate Validator,
+- Lombok,
+- H2 database
+
 # Endpoints
 ## Creating note:
 Request: method POST curl: http://localhost:8080/v1/notes that endpoint consumes JSON (you don't have to place id, create, modified, this data are read-only) e.g<br />
