@@ -15,7 +15,7 @@ This project provides a simple RESTful web API where you can manage with notes.
  - server port it's 8080,
  - url: http://localhost:8080/v1
  
-# application diagram
+# Application diagram
  ![diagram](https://snipboard.io/jFVdqn.jpg)
 # Technologies
 - Java 8
