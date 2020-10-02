@@ -13,113 +13,113 @@ This project provides a simple RESTful web API where you can manage with notes.
  - server port it's 8080
 # Endpoints
 ## Creating note:
-Request: method POST curl: http://localhost:8080/v1/notes that endpoint consumes JSON (you don't have to place id, create, modified, this data are read-only) e.g
+Request: method POST curl: http://localhost:8080/v1/notes that endpoint consumes JSON (you don't have to place id, create, modified, this data are read-only) e.g<br />
 {	<br />
 	"title": "note",<br />
 	"content": "do sth"<br />
-}
+}<br />
 
 ## Getting single note:
-Request: method GET curl: http://localhost:8080/v1/notes/{id} e.g http://localhost:8080/v1/notes/1
-id - requested path variable
-Possible Response:
-{
-    "id": 5,
-    "title": "note",
-    "content": "text",
-    "created": "2020-10-02",
-    "modified": null
-}
+Request: method GET curl: http://localhost:8080/v1/notes/{id} e.g http://localhost:8080/v1/notes/1<br />
+id - requested path variable<br />
+Possible Response:<br />
+{<br />
+    "id": 5,<br />
+    "title": "note",<br />
+    "content": "text",<br />
+    "created": "2020-10-02",<br />
+    "modified": null<br />
+}<br />
 
 
 ## Getting all notes:
-Request: method GET curl: http://localhost:8080/v1/notes
-Possible Response:
-[
-{
-    "id": 1,
-    "title": "note",
-    "content": "text",
-    "created": "2020-10-02",
-    "modified": null
-}
-{
-    "id": 2,
-    "title": "note",
-    "content": "text",
-    "created": "2020-10-02",
-    "modified": null
-}]
+Request: method GET curl: http://localhost:8080/v1/notes<br />
+Possible Response:<br />
+[<br />
+{<br />
+    "id": 1,<br />
+    "title": "note",<br />
+    "content": "text",<br />
+    "created": "2020-10-02",<br />
+    "modified": null<br />
+}<br />
+{<br />
+    "id": 2,<br />
+    "title": "note",<br />
+    "content": "text",<br />
+    "created": "2020-10-02",<br />
+    "modified": null<br />
+}<br />]<br />
 
 ## Update note
-Request: method PUT curl: http://localhost:8080/v1/notes that endpoint cosnumes JSON with note's id, and modified data e.g
-{	
-	"id": 1,
-	"title": "note",
-	"content": "do sth"
-}
+Request: method PUT curl: http://localhost:8080/v1/notes that endpoint cosnumes JSON with note's id, and modified data e.g<br />
+{	<br />
+	"id": 1,<br />
+	"title": "note",<br />
+	"content": "do sth"<br />
+}<br />
 
 ## Delete note
-Request: method DELETE curl: http://localhost:8080/v1/notes/{id} e.g http://localhost:8080/v1/notes/1
-id - requested path variable
-When you delete note it is stored in version history.
-In note's
+Request: method DELETE curl: http://localhost:8080/v1/notes/{id} e.g http://localhost:8080/v1/notes/1<br />
+id - requested path variable<br />
+When you delete note it is stored in version history.<br />
+
 
 ## Get all versions of note
-Notes are versioned you can can check note's story of modifies.
-Request: method GET curl: http://localhost:8080/v1/versions?note_Id=1
-note_Id - query parameter. Id of note, which you want check.
-Even if you delete note, you can check story of changes.
-In response you can see id, noteId, title, content, created, modified, action(CREATE, UPDATE or DELETE), date of modification and version.
-Possible Response:
-[
-    {
-        "id": 2,
-        "noteId": 1,
-        "title": "note",
-        "content": "do sth",
-        "created": "2020-10-02",
-        "modified": null,
-        "action": "CREATE",
-        "version": 1
-    },
-    {
-        "id": 9,
-        "noteId": 1,
-        "title": "note 111",
-        "content": "read book",
-        "created": "2020-10-02",
-        "modified": "2020-10-02",
-        "action": "UPDATE",
-        "version": 2
-    },
-    {
-        "id": 10,
-        "noteId": 1,
-        "title": "note 111",
-        "content": "do sth",
-        "created": "2020-10-02",
-        "modified": "2020-10-02",
-        "action": "UPDATE",
-        "version": 3
-    },
-    {
-        "id": 11,
-        "noteId": 1,
-        "title": "note 111",
-        "content": "do sth",
-        "created": "2020-10-02",
-        "modified": "2020-10-02",
-        "action": "DELETE",
-        "version": 4
-    }
-]
+Notes are versioned you can can check note's story of modifies.<br />
+Request: method GET curl: http://localhost:8080/v1/versions?note_Id=1<br />
+note_Id - query parameter. Id of note, which you want check.<br />
+Even if you delete note, you can check story of changes.<br />
+In response you can see id, noteId, title, content, created, modified, action(CREATE, UPDATE or DELETE), date of modification and version.<br />
+Possible Response:<br />
+[<br />
+    {<br />
+        "id": 2,<br />
+        "noteId": 1,<br />
+        "title": "note",<br />
+        "content": "do sth",<br />
+        "created": "2020-10-02",<br />
+        "modified": null,<br />
+        "action": "CREATE",<br />
+        "version": 1<br />
+    },<br />
+    {<br />
+        "id": 9,<br />
+        "noteId": 1,<br />
+        "title": "note 111",<br />
+        "content": "read book",<br />
+        "created": "2020-10-02",<br />
+        "modified": "2020-10-02",<br />
+        "action": "UPDATE",<br />
+        "version": 2<br />
+    },<br />
+    {<br />
+        "id": 10,<br />
+        "noteId": 1,<br />
+        "title": "note 111",<br />
+        "content": "do sth",<br />
+        "created": "2020-10-02",<br />
+        "modified": "2020-10-02",<br />
+        "action": "UPDATE",<br />
+        "version": 3<br />
+    },<br />
+    {<br />
+        "id": 11,<br />
+        "noteId": 1,<br />
+        "title": "note 111",<br />
+        "content": "do sth",<br />
+        "created": "2020-10-02",<br />
+        "modified": "2020-10-02",<br />
+        "action": "DELETE",<br />
+        "version": 4<br />
+    }<br />
+]<br />
 
 
 # Additional API documentation
 - Run application
 - Api doc is available on: http://localhost:8080/swagger-ui.html
 # Author
-Marcin Turczyn
+- Marcin Turczyn
   
 
