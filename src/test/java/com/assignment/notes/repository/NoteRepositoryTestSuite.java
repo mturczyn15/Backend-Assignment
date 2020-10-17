@@ -49,7 +49,7 @@ public class NoteRepositoryTestSuite {
         Long id = save.getId();
         noteRepository.deleteById(id);
         //Then
-        assertEquals(0, noteRepository.findAll().size());
+        assertEquals(0, noteRepository.count());
 
     }
 
@@ -63,7 +63,7 @@ public class NoteRepositoryTestSuite {
         Note saveNote2 = noteRepository.save(note2);
         Long noteId1 = saveNote1.getId();
         Long noteId2 = saveNote2.getId();
-        int countOfNotes = noteRepository.findAll().size();
+        int countOfNotes = (int) noteRepository.count();
         //Then
         Assert.assertEquals(2, countOfNotes);
         //CleanUp
